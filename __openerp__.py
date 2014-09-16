@@ -8,5 +8,5 @@
     'version':'dia1',
     'depends':['base', ],
     'data':[],
-    'demo':[],
+    'demo':[], 
 }
