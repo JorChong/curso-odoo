@@ -10,7 +10,7 @@ class categoria(osv.osv):
     _columns = {
         'name': fields.char('Nombre'),
         'description':fields.text('Descripcion'),
-        'parent_id':fields.may2one('co.categoria', 'Padre'),
+        'parent_id':fields.many2one('co.categoria', 'Padre'),
         'child_ids':fields.one2many(
             'co.categoria', 
             'parent_id', 
