@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Menu padre-->
+        <menuitem id="menu_base_curso" name="Inicio" sequence="5" groups="base.group_user"/>
+        <!--Submenu multimedia-->
+        <menuitem id="submenu_multimedia" name="Multimedia" parent="menu_base_curso" sequence="5" groups="base.group_user"/>
+
+    </data>
+</openerp>
