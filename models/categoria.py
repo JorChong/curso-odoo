@@ -5,6 +5,9 @@ from openerp.osv import osv, fields
 class categoria(osv.osv):
     _name = 'co.categoria'
     _description = 'CO Categoria'
+    _rec_name = 'name'
+    _order = 'description desc'
+
 
 
     _columns = {
