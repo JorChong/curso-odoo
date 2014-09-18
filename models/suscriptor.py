@@ -14,4 +14,7 @@ class suscriptor(osv.osv):
         'address':fields.text('Dirección'),
     }
 
+    _sql_constraints =[
+        ('identification_uniq', 'unique(identification)','El numero de cedula o pasaporte no se puede repetir')
+    ]
 suscriptor()
