@@ -30,6 +30,7 @@
 
                                             <tree editable="bottom" delete="false">
                                                <field name="medio_id" on_change="onchange_medio_id(medio_id)"/>
+
                                                <field name="multimedia_id" domain="[('medio_ids', '=', medio_id)]" />
                                                <!--domain="[('id', 'in', multimedia_id.medio_id)]"-->
                                                
@@ -76,7 +77,7 @@
             </field>
         </record>
 
-         <menuitem id="submenu_tienda" name="Sucursales" parent="menu_base_curso" sequence="10" groups="base.group_user"/>
+         <menuitem id="submenu_tienda" name="Sucursales" parent="menu_base_curso" sequence="10" groups="group_admin"/>
 
         <menuitem action="action_tienda" id="menu_tienda" sequence="5" parent="submenu_tienda" />
 

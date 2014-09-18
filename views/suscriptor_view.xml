@@ -58,7 +58,7 @@
             </field>
         </record>
 
-         <menuitem id="submenu_suscriptor" name="Suscriptores" parent="menu_base_curso" sequence="10" groups="base.group_user"/>
+         <menuitem id="submenu_suscriptor" name="Suscriptores" parent="menu_base_curso" sequence="10" groups="group_admin,group_suscriptor"/>
 
         <menuitem action="action_suscriptor" id="menu_suscriptor" sequence="5" parent="submenu_suscriptor" />
 
