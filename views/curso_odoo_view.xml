@@ -2,9 +2,9 @@
 <openerp>
     <data>
         <!--Menu padre-->
-        <menuitem id="menu_base_curso" name="Inicio" sequence="5" groups="base.group_user"/>
+        <menuitem id="menu_base_curso" name="Inicio" sequence="5" groups="group_admin,group_suscriptor"/>
         <!--Submenu multimedia-->
-        <menuitem id="submenu_multimedia" name="Multimedia" parent="menu_base_curso" sequence="5" groups="base.group_user"/>
+        <menuitem id="submenu_multimedia" name="Multimedia" parent="menu_base_curso" sequence="5" groups="group_admin,group_suscriptor"/>
 
     </data>
 </openerp>
