@@ -13,5 +13,15 @@
             <field eval = "4" name="padding" />
             <field name = 'prefix'>SUS/%(year)s/</field>
         </record>
+
+        <record id="tipo_suscripcion_bronce" model="co.tiposuscripcion">
+            <field name="name">Bronce</field>            
+        </record>
+        <record id="tipo_suscripcion_plata" model="co.tiposuscripcion">
+            <field name="name">Plata</field>            
+        </record>
+        <record id="tipo_suscripcion_oro" model="co.tiposuscripcion">
+            <field name="name">Oro</field>            
+        </record>
     </data>
 </openerp>

@@ -1,0 +1,40 @@
+<document filename="listado.pdf">
+    <template title="Listado multimedia" author="Jorge Chong" allowSplitting="20">
+        <pageTemplate id="first">
+            <frame id="first" x1="0" y1="0" width="539" height="786" />
+        </pageTemplate>
+    </template>
+
+    <stylesheet>
+
+    </stylesheet>
+
+    <story>
+        <pto>
+            <section>
+                <para>Listado de multimedia</para>
+                <para>[[repeatIn(objects, 'o')]]</para>
+                <blockTable>
+                    <tr>
+                        <td>
+                            <para>[[ o.code ]]</para>
+                        </td>
+                        <td>
+                            <para>[[ o.title ]]</para>
+                        </td>
+                        <td>
+                            <para>[[ o.release_date ]]</para>
+                        </td>
+                        <td>
+                            <para>[[ o.categoria_id.name ]]</para>
+                        </td>
+                        <td>
+                            <para>[[ get_medios(o) ]]</para>
+                        </td>
+                        
+                    </tr>
+                </blockTable>
+            </section>
+        </pto>
+    </story>
+</document>

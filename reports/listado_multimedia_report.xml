@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+     	<report id="report_listado_multimedia" string="Listado Multimedia" model="co.multimedia" name="listado.multimedia" rml="curso_odoo/reports/listado_multimedia.rml" />
+    </data>
+</openerp>
