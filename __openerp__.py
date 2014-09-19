@@ -17,9 +17,11 @@
         'views/solicitud_view.xml',
         'views/tienda_view.xml',
         'views/categoria_view.xml',
+        'views/tipo_suscripcion_view.xml',
         'security/menu_security.xml',
         'data/suscripcion_data.xml',
         'security/ir.model.access.csv',
+        'reports/listado_multimedia_report.xml',
     ],
     'demo':[], 
 }
