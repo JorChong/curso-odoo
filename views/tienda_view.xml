@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Vista form de CO Multimedia-->
+        <record id="view_tienda_form" model="ir.ui.view">
+            <field name="name">co.tienda.form</field>
+            <field name="model">co.tienda</field>
+            <field name="arch" type="xml">
+                <form string="Tienda" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" />
+                            <h1>
+                            <field name="name" />
+                            </h1>
+                      
+                        </div>
+                             <notebook>
+                                <page string="Detalle">
+                                    <group>
+                                      
+                                        <field name="address" />
+                                     </group>
+                                </page>
+
+                                <page string="Stock">
+                                    <group>
+                                      
+                                        <field name="line_ids" nolabel="1" >
+
+                                            <tree editable="bottom" delete="false">
+                                               <field name="medio_id" on_change="onchange_medio_id(medio_id)"/>
+
+                                               <field name="multimedia_id" domain="[('medio_ids', '=', medio_id)]" />
+                                               <!--domain="[('id', 'in', multimedia_id.medio_id)]"-->
+                                               
+                                               <!--<field name="tienda_id" attrs="{'readonly':[('quantily', '&lt;', 1)]}"/>-->
+                                               <field name="tienda_id" invisible="1"/>
+                                               <field name="quantity" />
+
+                                            </tree>
+
+                                        </field>
+                                  
+                                     </group>
+                                </page>
+                            </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!--Vista tree de CO Multimedia-->
+        <record id="view_tienda_tree" model="ir.ui.view">
+            <field name="name">co.tienda.tree</field>
+            <field name="model">co.tienda</field>
+            <field name="arch" type="xml">
+                <tree string="Tienda">
+                        <field name="name" />
+                        <field name="address" />
+                      
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_tienda" model="ir.actions.act_window">
+            <field name="name">Tienda</field>
+            <field name="res_model">co.tienda</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_tienda_tree" />
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Acá se registran las tiendas
+                </p>
+            </field>
+        </record>
+
+         <menuitem id="submenu_tienda" name="Sucursales" parent="menu_base_curso" sequence="10" groups="group_admin"/>
+
+        <menuitem action="action_tienda" id="menu_tienda" sequence="5" parent="submenu_tienda" />
+
+    </data>
+</openerp>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--Vista form de CO Multimedia-->
+        <record id="view_tipo_suscripcion_form" model="ir.ui.view">
+            <field name="name">co.tiposuscripcion.form</field>
+            <field name="model">co.tiposuscripcion</field>
+            <field name="arch" type="xml">
+                <form string="Tipo  de suscripcion" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="title" class="oe_edit_only" />
+                            <h1>
+                            <field name="name" />
+                            </h1>
+                            <label for="medio_ids" class="oe_edit_only" string="Con acceso a" />
+    
+                            <field name="medio_ids" widget="many2many_tags" />
+                                
+                        </div>
+    
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!--Vista tree de CO Multimedia-->
+        <record id="view_tipo_suscripcion_tree" model="ir.ui.view">
+            <field name="name">co.tiposuscripcion.tree</field>
+            <field name="model">co.tiposuscripcion</field>
+            <field name="arch" type="xml">
+                <tree string="Tipo de suscripcion">
+                        <field name="name" />
+                      
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_tipo_suscripcion" model="ir.actions.act_window">
+            <field name="name">Tipo de suscripcion</field>
+            <field name="res_model">co.tiposuscripcion</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_tipo_suscripcion_tree" />
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Acá se registran los tipos de suscripcions que estaran disponible en los contenidos multimedias
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="action_tipo_suscripcion" id="menu_tipo_suscripcion" sequence="5" parent="submenu_multimedia" />
+
+    </data>
+</openerp>
